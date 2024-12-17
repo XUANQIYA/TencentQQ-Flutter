@@ -264,6 +264,4 @@ Future<void> _handleRefresh() async {
       ),
     );
   }
-
-// ... 其他现有的方法保持不变
 }

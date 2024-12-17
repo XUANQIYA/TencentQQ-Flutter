@@ -152,18 +152,20 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Colors.white,
-              Color(0xFFF5F9FF),
-              Color(0xFFEDF4FF),
-            ],
-          ),
-        ),
+    body: SingleChildScrollView( // 添加滚动视图
+    child: Container(
+    height: MediaQuery.of(context).size.height,
+    decoration: BoxDecoration(
+    gradient: LinearGradient(
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+    colors: [
+    Colors.white,
+    Color(0xFFF5F9FF),
+    Color(0xFFEDF4FF),
+    ],
+    ),
+    ),
         child: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 24.0),
@@ -269,6 +271,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
       ),
+      )
     );
   }
 
